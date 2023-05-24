@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Main Page </title>
+    <link rel="stylesheet" href="{% static 'css/mainpage.css' %}">
+</head>
+
+
+<body>
+    <h1 class="FW"> WELCOME TO OUR PAGE :) </h1>
+    <div class="name">
+        <a href="{% url 'login' %}">
+            <button class="btn1"> Students Affairs </button></a>
+        <button onclick="our()" class="btn2"> Human Resources</button>
+        <button onclick="our()" class="btn3"> Higher Studies </button>
+        <button onclick="our()" class="btn4"> Laboratory Tracking </button>
+    </div>
+    <script type="text/javascript" src="../script-js/homeHomePage.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+body {
+    background-color: rgb(220, 219, 219);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-size: 90px;
+    font-style: italic;
+    color: aliceblue;
+    color: black;
+}
+
+.div1 {
+    padding: 10px;
+    border: solid 2px;
+    background-color: rgb(67, 67, 67);
+    border-radius: 100px;
+}
+
+.newbtn {
+    background-color: lightgray;
+    width: 300px;
+    height: 32px;
+    align-content: center;
+    border-radius: 7px;
+    box-shadow: inset 0 0 0 0;
+    border: none;
+    transition: ease-out 0.5s;
+    font-weight: normal;
+    font-size: larger;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.newbtn:hover {
+    box-shadow: inset 300px 0 0 0 lightblue;
+}
+
+.updatebtn {
+    background-color: lightgray;
+    width: 200px;
+    height: 32px;
+    align-content: center;
+    border-radius: 7px;
+    border: none;
+    transition: ease-out 0.5s;
+    font-weight: normal;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.updatebtn:hover {
+    box-shadow: inset 0 0 0 200px lightblue;
+
+}
+
+.viewbtn {
+    background-color: lightgray;
+    width: 200px;
+    height: 32px;
+    align-content: center;
+    font-size: larger;
+    border-radius: 7px;
+    border: none;
+    transition: ease-out 0.4s;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.viewbtn:hover {
+    box-shadow: inset 0 0 0 200px lightblue;
+}
+
+.searchbtn {
+    background-color: lightgray;
+    width: 200px;
+    height: 32px;
+    align-content: center;
+    font-size: larger;
+    border-radius: 7px;
+    border: none;
+    transition: ease-out 0.4s;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.searchbtn:hover {
+    box-shadow: inset 0 0 0 200px lightblue;
+}
+
+.outbtn {
+    width: 150px;
+    height: 28px;
+    align-content: center;
+    background-color: rgb(193, 196, 199);
+    border: solid 2px;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: ease-out 0.5s;
+    border-radius: 5px;
+}
+
+.outbtn:hover {
+    box-shadow: inset 0px 0px 0px 150px darkcyan;
+}

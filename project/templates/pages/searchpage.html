@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Search Page </title>
+    <link rel="stylesheet" href="{% static 'css/searchpage.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div align="right">
+        <a href="{% url 'pageOneMyTutorial' %}">
+            <input class="homebtn" type="button" value="Home Page">
+        </a>
+    </div>
+    <div>
+        <h1 align="center">
+            Search Page
+        </h1>
+    </div> <br> <br>
+    <div align="center">
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" name="search" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+    </div>
+    <table border=1 width="1000" height="35" cellspacing="0" align="center">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>ID</th>
+            <th>Level</th>
+            <th>GPA</th>
+            <!--if not yet determined, appears as NULL-->
+            <th>Gender</th>
+            <th>Date of Birth</th>
+            <th>Mobile Phone</th>
+            <th>Status</th>
+            <th>DELETE</th>
+            <th>Edit</th>
+            <!--Active/InActive-->
+            <!--can be changed here-->
+        </tr>
+        {% for x in student %}
+        <tr>
+            <td>{{x.firstName}}</td>
+            <td>{{x.lastName}}</td>
+            <td>{{x.studentId}}</td>
+            <td>{{x.level}}</td>
+            <td>{{x.GPA}}</td>
+            <td>{{x.gender}}</td>
+            <td>{{x.date}}</td>
+            <td>{{x.phoneNumber}}</td>
+            <td>{{x.active}}</td>
+            <td><a href="search/Update/{{ x.id }}" class='btn btn-warning'>Edit</a></td>
+            <td><a href="search/Delete/{{ x.id }}" class='btn btn-warning'>DELETE</a></td>
+            
+
+        </tr>
+        {% endfor %}
+    </table> <br><br>
+    <hr>
+    <div align="center" style="padding-top: 12%;">
+        <a href="Departement-Assignment-Page.html">
+            <input class="department_button" type="button" value="Choose Department">
+        </a>
+
+
+
+
+
+    </div>
+
+    <!-- <div align="center" style="padding-left: 4%;">
+        <input type="button" value="UPDATE"
+            style="background-color:rgb(11, 218, 38); width: 100px ;height: 32px; align-content: center;">
+        <input type="button" value="DELETE "
+            style="background-color: rgb(180, 17, 17); width: 100px ;height: 32px; align-content: center;"> <br>
+    </div> -->
+    <script>
+        $(document).ready(function(){
+          setInterval(function(){
+            $.ajax({
+              type:'GET',
+              url:"/getdata",
+              success:function(response)
+              {
+                $("#tr").empty();
+                for(var key in response.std_data)
+                {
+                  var data = "<tr>" +
+                    "<td>" + response.std_data[key].ID + "</td>" +
+                    "<td>" + response.std_data[key].First_name + "</td>" +
+                    "<td>" + response.std_data[key].last_name + "</td>" +
+                    "<td>" + response.std_data[key].Status + "</td>" +
+                    "</tr>";
+                  $("#tr").append(data);
+  
+                }
+              },
+  
+            });
+          },100);
+        });
+      </script>
+    
+</body>
+
+</html>

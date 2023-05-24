@@ -1,0 +1,97 @@
+* {
+    background-color: black;
+}
+
+.FW {
+    color: rgb(255, 255, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding-top: 7%;
+}
+
+.name {
+    align-items: center;
+    text-align: center;
+    padding-top: 11%;
+
+}
+
+.btn1 {
+    width: 270px;
+    height: 100px;
+    color: rgb(192, 190, 172);
+    background-color: rgb(51, 51, 53);
+    border-radius: 8px;
+    box-shadow: inset 0 0 0 0 rgb(0, 95, 87);
+    transition: ease-out 0.4s;
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 2px solid;
+
+}
+
+.btn1:hover {
+    box-shadow: inset 255px 0px 0px 0px rgb(192, 190, 172);
+    cursor: pointer;
+    color: rgb(51, 51, 53);
+}
+
+.btn2 {
+    width: 270px;
+    height: 100px;
+    color: rgb(192, 190, 172);
+    background-color: rgb(51, 51, 53);
+    border-radius: 8px;
+    box-shadow: inset 0 0 0 0 rgb(0, 95, 87);
+    transition: ease-out 0.4s;
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 2px solid;
+
+}
+
+.btn2:hover {
+    box-shadow: inset 255px 0px 0px 0px rgb(192, 190, 172);
+    cursor: pointer;
+    color: rgb(51, 51, 53);
+}
+
+.btn3 {
+    width: 270px;
+    height: 100px;
+    color: rgb(192, 190, 172);
+    background-color: rgb(51, 51, 53);
+    border-radius: 8px;
+    box-shadow: inset 0 0 0 0 rgb(0, 95, 87);
+    transition: ease-out 0.4s;
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 2px solid;
+
+}
+
+.btn3:hover {
+    box-shadow: inset 255px 0px 0px 0px rgb(192, 190, 172);
+    cursor: pointer;
+    color: rgb(51, 51, 53);
+}
+
+.btn4 {
+    width: 270px;
+    height: 100px;
+    color: rgb(192, 190, 172);
+    background-color: rgb(51, 51, 53);
+    border-radius: 8px;
+    box-shadow: inset 0 0 0 0 rgb(0, 95, 87);
+    transition: ease-out 0.4s;
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 2px solid;
+
+}
+
+.btn4:hover {
+    box-shadow: inset 255px 0px 0px 0px rgb(192, 190, 172);
+    cursor: pointer;
+    color: rgb(51, 51, 53);
+}

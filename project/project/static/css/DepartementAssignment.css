@@ -1,0 +1,63 @@
+body {
+    background-color: rgb(198, 198, 198);
+    background-size: cover;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+/* .navigation_button {
+
+    height: 35px;
+    width: 150px;
+    background-color: lightskyblue;
+    color: black;
+    border-color: azure;
+    font-weight: bold;
+    font-size: 16px;
+
+} */
+.homebtn {
+    color: rgb(255, 255, 255);
+    background-color: rgb(56, 137, 172);
+    width: 100px;
+    height: 30px;
+    transition: ease-out 0.4s;
+    box-shadow: inset 0 0 0 0 lightskyblue;
+    border-radius: 7px;
+    border: none;
+
+
+}
+
+
+.homebtn:hover {
+
+    color: azure;
+    transition: ease-out 0.4s;
+    box-shadow: inset 100px 0 0 0 rgb(132, 11, 11);
+}
+
+#bkbtn {
+    margin-top: 5px;
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    background-color: white;
+    border-radius: 7px;
+}
+
+select {
+    height: 30px;
+    width: 110px;
+    font-weight: bold;
+}
+
+#submit_button {
+    height: 30px;
+    width: 80px;
+    font-weight: bold;
+}

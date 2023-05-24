@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Departement Assignment</title>
+    <link rel="stylesheet" href="{% static 'css/DepartementAssignment.css' %}">
+</head>
+
+<body>
+
+    <div align="right">
+        <a href="{% url 'pageOneMyTutorial' %}">
+            <input class="homebtn" type="button" value="Home Page ">
+        </a>
+    </div>
+    <div align="right">
+        <a href="{% url 'search' %}">
+            <input class="homebtn" id="bkbtn" type="button" value="Back">
+        </a>
+    </div>
+    <h1>Departement Assignment</h1>
+    <br>
+    <table border=1 height="70" cellspacing="0">
+        <tr>
+            <th width="125">Name</th>
+            <td width="175" id="name"></td>
+        </tr>
+        <tr height="35">
+            <th width="125">ID</th>
+            <td width="175" id="ID"></td>
+        </tr>
+    </table>
+    <form method="post" Align="center">
+        <h3>Choose Departement:
+            <select name="Departement">
+                <option>Departement</option>
+                <option>CS</option>
+                <option>IT</option>
+                <option>IS</option>
+                <option>AI</option>
+                <option>DS</option>
+                <br>
+                <input type="submit" id="submit_button" value="Submit"></a>
+            </select>
+        </h3>
+    </form>
+
+</body>
+
+</html>

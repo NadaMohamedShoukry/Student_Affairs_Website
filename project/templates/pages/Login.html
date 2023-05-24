@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login </title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div align="right">
+        <a href="{% url 'home' %}">
+            <input class="homebtn" id="bkbtn" type="button" value=" Back <">
+        </a>
+    </div>
+    <h1 align="center"> Log In</h1>
+    <div class="div1" align="center">
+        <form action="{% url 'pageOneMyTutorial' %}" method="POST">
+            {% csrf_token %}
+            <label class="labelforall">Email:</label> <br>
+            <input class="txtfield" id="email" placeholder="Please Enter your E-mail" type="email" name="email1" onkeyup="isEmail()"
+                required>
+            <span id="email_error"></span>
+            <br> <br>
+            <label class="labelforall">Password:</label> <br>
+            <input class="txtfield" name="password" id="contant_password" onkeyup="isPassword()"
+                placeholder="Please Enter your Password" type="password" required>
+            <span id="password_error"></span><br> <br>
+            <button class="logbtn" type="submit" value="Login" id='submit' onclick=" return VailedForm()">Login</button>
+            <span id='submit_error'></span>
+            <!-- <input class="logbtn" type="submit" value="Login"> -->
+            <br><br>
+        </form>
+    </div>
+    <!-- <script src="../script-js/login.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+</body>
+{% block javascript %}
+<script type="text/javascript" src="{% static 'js/login.js' %}">
+
+    $("#email").change(function(){
+        console.log($(this).val());
+    });
+</script>
+{% endblock %}
+
+</html>

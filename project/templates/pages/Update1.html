@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="{% static 'css/update2.css' %}">
+    <title>Student-Registration</title>
+    <link rel="stylesheet" href="../styleSheet-CSS/update2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <h1>
+        FCI-Student-Add :
+    </h1>
+    <div align="right">
+        <span>
+        <a href="{% url 'pageOneMyTutorial' %}">
+            <input type="button" class="homebtn" value="Home Page <">
+        </a>
+    </span>
+    </div>
+    <form method="post" action="UpdateStudent/{{ x.id }}">
+        {% csrf_token %}
+        <fieldset class="themainclass">
+            <legend class="legend">Student Info</legend>
+            <label>New ID :<br />
+                <input type="number" name="ID" placeholder="Your ID " class="alltext" required id="contant_id"
+                    onkeyup="check_id()" value="{{x.studentId}}" /></label>
+            <span id='id'><br> </span>
+
+            <label>New First Name:<br />
+                <input type="text" name="Namef" placeholder="Frist Name" class="alltext" required id="contant_fname"
+                    onkeyup="isFName()" value="{{x.firstName}}"/></label>
+            <span id='fname'> <br></span>
+            <label>New Last Name:<br />
+                <input type="text" name="Namel" placeholder="Last Name" class="alltext" required id="contant_lname"
+                    onkeyup='isLName()'value="{{x.lastName}}" /></label>
+            <span id='lname'><br> </span>
+
+            <label>New Mobile Phone :<br />
+                <input type="text" name="MobilePhone" class="alltext" placeholder="Phone Number" id="Phone_contant"
+                    onkeyup="isPhone()"value="{{x.phoneNumber}}" /></label>
+            <span id='phone'><br> </span>
+            
+            <label>Date : <br>
+                <input type="date" name="date1">
+            </label>
+            <label> Time : <input type="time" name="time1"></label>
+
+            </label> <br> <br>
+            <label>New E-mail :<br />
+                <input type="email" name="Email" class="alltext" placeholder="E-mail-@-" id="email_contant"
+                    onkeyup="isEmail()" value="{{x.emailStudent}}"/></label>
+            <span id='email'> <br></span>
+            <label>New GPA :<br />
+                <input type="number" name="GPA" class="alltext" placeholder="GPA" id="contant_Gpa" onkeyup="isGpa()"
+                    step="0.01" value="{{x.GPA}}"/></label>
+            <span id='Gpa'> <br> </span>
+            <br>
+
+            <label>
+                <tr>
+                    <td>
+
+                        <select name="level" style="font-size: 15px; background-color:rgb(204, 204, 204) ;">
+                            <option value="first">{{x.level}} </option>
+                            <option value="first">First </option>
+                            <option value="first">Second </option>
+                            <option value="first">Third </option>
+
+                            <option value="first">Fourth</option>
+
+
+                        </select> <br> <br>
+                        <select name="Department" style="font-size: 15px; background-color:rgb(204, 204, 204) ;">
+                            <option value="department"> Department</option>
+
+
+                        </select>
+                    </td>
+                    <label style="color: rgb(0, 0, 0);"> (Can-not-Update-this-field)</label>
+
+                </tr>
+            </label>
+            <br> <br>
+
+            <label>
+                <tr>
+                    <td>New Status :</td> <br />
+                    <td>
+                        <input id="ac" type="radio" name="Status" value="active" /><label for="ac">Active</label>
+                        <input id="in" type="radio" name="Status" value="inactive" /> <label for="in">Inactive</label>
+                    </td>
+                </tr>
+            </label> <br /> <br>
+
+            <button class="sub" value="Register" onclick="return VailedForm()">Update</button>
+            <input onclick="our()" type="reset" class="reset">
+            <span id='submit_error'></span>
+
+        </fieldset>
+    </form>
+</body>
+<script src= "{% static 'js/Form.js' %} "></script>
+</html>

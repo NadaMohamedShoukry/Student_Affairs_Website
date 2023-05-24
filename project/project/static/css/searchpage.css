@@ -1,0 +1,72 @@
+body {
+    background-color: rgb(220, 219, 219);
+    /* background-image: url(PIC3.jpeg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.homebtn {
+    color: rgb(255, 255, 255);
+    background-color: rgb(56, 137, 172);
+    width: 100px;
+    height: 30px;
+    transition: ease-out 0.4s;
+    box-shadow: inset 0 0 0 0 lightskyblue;
+    border-radius: 7px;
+    border: none;
+
+}
+
+
+.homebtn:hover {
+
+    color: azure;
+    transition: ease-out 0.4s;
+    box-shadow: inset 100px 0 0 0 rgb(132, 11, 11);
+}
+
+/* .homebutton {
+    height: 32px;
+    width: 200ppx;
+    background-color: rgb(3, 3, 63);
+    color: azure;
+} */
+
+h1 {
+    color: rgb(6, 107, 196);
+    padding-top: 1%;
+    padding-left: 3%;
+    font-size: 40px;
+}
+
+div {
+    padding-bottom: 5%;
+}
+
+.label_search {
+    color: rgb(6, 107, 196);
+    font-size: 25px;
+}
+
+.in_search {
+    width: 400px;
+    height: 35px;
+    border-radius: 7px;
+    border: 1.3px solid;
+    padding-top: 4px;
+    text-align: center;
+    font-size: large;
+    text-transform: capitalize;
+}
+
+table {
+    background-color: white;
+}
+
+.department_button {
+    width: 200px;
+    height: 28px;
+    align-content: center;
+}

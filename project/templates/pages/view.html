@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/view.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>View Students</title>
+</head>
+
+<body>
+    <h1>All Active/InActive Students Information</h1>
+    <div align="right">
+        <a href="{% url 'pageOneMyTutorial' %}">
+            <input type="button" class="homebtn" value="Home Page">
+        </a>
+        <div align="right">
+            <form method="post" align="left">
+                <label style="font-size: 23px;">Choose Active/InActive:</label>
+                <select name="activity">
+                    <option>All Students</option>
+                    <option>Active Students</option>
+                    <option>InActive Students</option>
+                </select>
+
+            </form>
+            <table id="customers">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>ID</th>
+                    <th>Level</th>
+                    <th>GPA</th>
+                    <!--if not yet determined, appears as NULL-->
+                    <th>Gender</th>
+                    <th>Date of Birth</th>
+                    <th>Mobile Phone</th>
+                    <th>Status</th>
+                    <!--Active/InActive-->
+                    <!--can be changed here-->
+                </tr>
+                {% for x in student %}
+                <tr>
+                    <td>{{x.firstName}}</td>
+                    <td>{{x.lastName}}</td>
+                    <td>{{x.studentId}}</td>
+                    <td>{{x.level}}</td>
+                    <td>{{x.GPA}}</td>
+                    <td>{{x.gender}}</td>
+                    <td>{{x.date}}</td>
+                    <td>{{x.phoneNumber}}</td>
+                    <td>{{x.active}}</td>
+                    
+
+                </tr>
+                {% endfor %}
+            </table>
+            <script>
+                $(document).ready(function(){
+                  setInterval(function(){
+                    $.ajax({
+                      type:'GET',
+                      url:"/getdata",
+                      success:function(response)
+                      {
+                        $("#tr").empty();
+                        for(var key in response.std_data)
+                        {
+                          var data = "<tr>" +
+                            "<td>" + response.std_data[key].ID + "</td>" +
+                            "<td>" + response.std_data[key].First_name + "</td>" +
+                            "<td>" + response.std_data[key].last_name + "</td>" +
+                            "<td>" + response.std_data[key].Status + "</td>" +
+                            "</tr>";
+                          $("#tr").append(data);
+          
+                        }
+                      },
+          
+                    });
+                  },100);
+                });
+              </script>
+            
+</body>
+
+</html>
